@@ -29,16 +29,17 @@ Os dados utilizados contêm informações sobre:
 - Presença de outliers com volumes muito elevados
 
 ### 🔹 Relação entre preço e vendas
-- Produtos mais baratos tendem a ter maior volume de vendas
-- Relação negativa leve entre preço e quantidade
+- Existe uma correlação positiva muito fraca (~0.11) entre preço e quantidade vendida
+- O preço não se mostra um fator determinante no volume de vendas
 
 ### 🔹 Vendas por marca
 - Forte concentração de vendas em poucas marcas
-- Destaque para Zorba e Lupo
+- Destaque para Zorba e Lupo, que apresentam maior participação no volume total
 
 ### 🔹 Correlação entre variáveis
 - Forte relação entre número de avaliações e quantidade vendida
 - Baixa influência de preço e desconto
+- Indício de que a popularidade dos produtos impacta mais as vendas do que o preço
 
 ---
 
@@ -51,3 +52,8 @@ A análise demonstra que o volume de vendas está mais relacionado à popularida
 - Aprofundar análise por categoria
 - Criar dashboards interativos
 - Aplicar modelagem preditiva
+
+---
+
+## 👩‍💻 Autor
+Priscilla J.Paz
