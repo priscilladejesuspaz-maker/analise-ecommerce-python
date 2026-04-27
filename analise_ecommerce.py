@@ -20,7 +20,6 @@ df = pd.read_csv(
 print(df.head())
 print(df.columns)
 
-
 # ===============================
 # TRATAMENTO DE DADOS
 # ===============================
@@ -38,6 +37,7 @@ def converter(valor):
 # Aplicando a conversão na coluna
 df['Qtd_Vendidos'] = df['Qtd_Vendidos'].apply(converter)
 
+print(df[['Preço', 'Qtd_Vendidos']].corr())
 
 # ===============================
 # 1. HISTOGRAMA
@@ -118,3 +118,32 @@ plt.pie(top_marcas_pizza, labels=top_marcas_pizza.index, autopct='%1.1f%%')
 plt.title('Participação das Top 5 Marcas nas Vendas')
 
 plt.show()
+
+# ===============================
+# 5. GRÁFICO DE DENSIDADE
+# ===============================
+
+plt.figure(figsize=(8,5))
+
+sns.kdeplot(df['Qtd_Vendidos'], fill=True)
+
+plt.title('Densidade da Quantidade Vendida')
+plt.xlabel('Quantidade Vendida')
+plt.ylabel('Densidade')
+
+plt.show()
+
+# ===============================
+# 5. GRÁFICO DE REGRESSÃO
+# ===============================
+
+plt.figure(figsize=(8,5))
+
+sns.regplot(x='Preço', y='Qtd_Vendidos', data=df, scatter_kws={'alpha':0.5})
+
+plt.title('Regressão: Preço vs Quantidade Vendida')
+plt.xlabel('Preço')
+plt.ylabel('Quantidade Vendida')
+
+plt.show()
+
